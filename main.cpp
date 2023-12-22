@@ -7,7 +7,6 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
-#include <bitset>
 #include <cmath>
 #include <chrono>
 #include <numeric>
@@ -96,9 +95,7 @@ inline int findIsomorhpismClasses() {
     // If iterations is odd subtract the extra iteration count so there is only one.
     // Remeber... MAX_EDGES is iterations - 1 because of the initial one we added,
     // so its even for MAX_EDGES.
-    count = MAX_EDGES % 2 == 0 ? count * 2 - matrices.size() : count * 2;
-
-    return count;
+    return MAX_EDGES % 2 == 0 ? count * 2 - matrices.size() : count * 2;
 }
 
 int main() {
@@ -114,7 +111,7 @@ int main() {
 
     cout << "Isomorhpism Classes: " << count << endl;
     cout << duration_cast<milliseconds>(duration).count() << " milliseconds\n";
-
     system("pause");
+
     return 0;
 }
