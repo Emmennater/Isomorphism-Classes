@@ -107,10 +107,9 @@ int main() {
     auto start = high_resolution_clock::now();
     int count = findIsomorhpismClasses();
     auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
-
+    
     cout << "Isomorhpism Classes: " << count << endl;
-    cout << duration_cast<milliseconds>(duration).count() << " milliseconds\n";
+    cout << duration_cast<milliseconds>(stop - start).count() << " milliseconds\n";
     system("pause");
 
     return 0;
